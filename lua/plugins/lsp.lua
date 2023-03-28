@@ -2,9 +2,9 @@ return {
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
+    -- @class PluginLspOpts
     opts = {
-      ---@type lspconfig.options
+      -- @type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pylsp = {
@@ -14,6 +14,7 @@ return {
             local root_files = {
               "setup.py",
               "manage.py",
+              ".git",
             }
             return lspconfig.util.root_pattern(unpack(root_files))(fname)
               or lspconfig.util.find_get_ancestor(fname)
@@ -69,10 +70,26 @@ return {
       -- you can use <C-t> to jump back
       { "gh", "<cmd>Lspsaga lsp_finder<cr>", desc = "Lspsaga lsp_finder" },
       { "gr", "<cmd>Lspsaga rename<cr>", desc = "Lspsaga rename" },
-      { "gd", "<cmd>Lspsaga peek_definition<cr>", desc = "Lspsaga peek_definition" },
-      { "gD", "<cmd>Lspsaga goto_definition<cr>", desc = "Lspsaga goto_definition" },
-      { "gt", "<cmd>Lspsaga peek_type_definition<cr>", desc = "Lspsaga peek_type_definition" },
-      { "gT", "<cmd>Lspsaga goto_type_definition<cr>", desc = "Lspsaga goto_type_definition" },
+      {
+        "gd",
+        "<cmd>Lspsaga peek_definition<cr>",
+        desc = "Lspsaga peek_definition",
+      },
+      {
+        "gD",
+        "<cmd>Lspsaga goto_definition<cr>",
+        desc = "Lspsaga goto_definition",
+      },
+      {
+        "gt",
+        "<cmd>Lspsaga peek_type_definition<cr>",
+        desc = "Lspsaga peek_type_definition",
+      },
+      {
+        "gT",
+        "<cmd>Lspsaga goto_type_definition<cr>",
+        desc = "Lspsaga goto_type_definition",
+      },
     },
     dependencies = {
       { "nvim-tree/nvim-web-devicons" },

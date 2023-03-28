@@ -10,6 +10,22 @@ return {
       -- colorscheme = "morning",
     },
   },
+  { "voldikss/vim-floaterm", event = "VeryLazy" },
+  { "ianva/vim-youdao-translater", event = "VeryLazy" },
+  {
+    "stevearc/aerial.nvim",
+    event = "VeryLazy",
+    config = function()
+      -- code
+      require("aerial").setup({
+        -- on_attach = function(bufnr)
+        --   -- Jump forwards/backwards with '{' and '}'
+        --   vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+        --   vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+        -- end,
+      })
+    end,
+  },
   -- {
   --   "nvim-tree/nvim-tree.lua",
   --   event = "VeryLazy",
@@ -40,19 +56,4 @@ return {
   --     })
   --   end,
   -- },
-  { "voldikss/vim-floaterm", event = "VeryLazy" },
-  { "ianva/vim-youdao-translater", event = "VeryLazy" },
-  {
-    "stevearc/aerial.nvim",
-    config = function()
-      -- code
-      require("aerial").setup({
-        -- on_attach = function(bufnr)
-        --   -- Jump forwards/backwards with '{' and '}'
-        --   vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
-        --   vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
-        -- end,
-      })
-    end,
-  },
 }
