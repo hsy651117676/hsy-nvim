@@ -8,6 +8,7 @@ return {
         "stylua",
         "shfmt",
         "flake8",
+        "python-lsp-server",
       },
     },
     -- @param opts MasonSettings | {ensure_installed: string[]}
