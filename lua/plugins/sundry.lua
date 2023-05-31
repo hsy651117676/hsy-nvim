@@ -10,7 +10,8 @@ return {
       -- colorscheme = "morning",
     },
   },
-  { "voldikss/vim-floaterm", event = "VeryLazy" },
+  { "voldikss/vim-floaterm", event = "VeryLazy"
+ },
   { "ianva/vim-youdao-translater", event = "VeryLazy" },
   {
     "stevearc/aerial.nvim",

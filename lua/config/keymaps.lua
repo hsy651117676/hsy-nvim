@@ -257,4 +257,11 @@ wk.register({
 -- F1-F12[key]
 wk.register({
   ["<F4>"] = { "<cmd>FloatermToggle<CR>", "Floaterm", opt },
+  ["<F5>"] = { "<cmd>lua require'dap'.continue()<cr>", "continue",opt },
+  ["<F6>"] = { "<cmd>lua require'dap'.step_over()<cr>", "step_over",opt },
+  ["<F7>"] = { "<cmd>lua require'dap'.step_into()<cr>", "step_into",opt },
+  ["<F8>"] = { "<cmd>lua require'dap'.repl.open()<cr>", "continue",opt },
+  ["<F10>"] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "toggle_breakpoint",opt },
 })
+
+
